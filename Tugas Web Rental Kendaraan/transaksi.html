@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Transaksi - Rental Kendaraan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .sidebar {
+            width: 220px;
+            background-color: #4CAF50;
+            height: 100vh;
+            padding: 20px;
+            position: fixed;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #388E3C;
+        }
+        .main {
+            margin-left: 260px;
+            padding: 20px;
+        }
+        .form-container, .table-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 30px;
+            width: 80%;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="date"],
+        .form-container input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #388E3C;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="pelanggan.html">Data Pelanggan</a>
+            <a href="transaksi.html">Data Transaksi</a>
+            <a href="karyawan.html">Data Karyawan</a>
+            <a href="kendaraan.html">Data Kendaraan</a>
+            <a href="login.html">Keluar</a>
+        </div>
+        <div class="main">
+            <div class="form-container">
+                <h2>Form Transaksi Baru</h2>
+                <form action="proses-transaksi.html" method="post">
+                    <label for="no-transaksi">Nomor Transaksi:</label>
+                    <input type="text" id="no-transaksi" name="no-transaksi" placeholder="Nomor Transaksi" required>
+
+                    <label for="nama-pelanggan">Nama Pelanggan:</label>
+                    <input type="text" id="nama-pelanggan" name="nama-pelanggan" placeholder="Nama Pelanggan" required>
+
+                    <label for="tanggal">Tanggal Transaksi:</label>
+                    <input type="date" id="tanggal" name="tanggal" required>
+
+                    <label for="kendaraan">Kendaraan yang Disewa:</label>
+                    <input type="text" id="kendaraan" name="kendaraan" placeholder="Jenis Kendaraan" required>
+
+                    <label for="pembayaran">Jumlah Pembayaran:</label>
+                    <input type="number" id="pembayaran" name="pembayaran" placeholder="Jumlah Pembayaran" required>
+
+                    <button type="submit">Tambah Transaksi</button>
+                </form>
+            </div>
+
+            <div class="table-container">
+                <h2>Data Transaksi</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nomor Transaksi</th>
+                            <th>Nama Pelanggan</th>
+                            <th>Tanggal</th>
+                            <th>Kendaraan</th>
+                            <th>Pembayaran</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>001</td>
+                            <td>Ahmad</td>
+                            <td>01/11/2024</td>
+                            <td>Mobil Sedan</td>
+                            <td>Rp. 250.000</td>
+                            <td><button>Edit</button> <button>Hapus</button></td>
+                        </tr>
+                    </tbody>
+                    
+                    

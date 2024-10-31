@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Kendaraan - Rental</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .sidebar {
+            width: 220px;
+            background-color: #4CAF50;
+            height: 100vh;
+            padding: 20px;
+            position: fixed;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #388E3C;
+        }
+        .main {
+            margin-left: 260px;
+            padding: 20px;
+        }
+        .form-container, .table-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 30px;
+            width: 80%;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #388E3C;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .tombol {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .tombol.edit {
+            background-color: #2196F3;
+        }
+        .tombol.hapus {
+            background-color: #f44336;
+        }
+        .tombol:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="pelanggan.html">Data Pelanggan</a>
+            <a href="transaksi.html">Data Transaksi</a>
+            <a href="karyawan.html">Data Karyawan</a>
+            <a href="kendaraan.html">Data Kendaraan</a>
+            <a href="login.html">Keluar</a>
+        </div>
+        <div class="main">
+            <h2>Data Kendaraan</h2>
+            <div class="main">
+                <div class="form-container">
+                    <h2>Form Transaksi Baru</h2>
+                    <form action="proses-transaksi.html" method="post">
+                        <label for="plat-nomor">Plat Nomor:</label>
+                        <input type="text" id="plat-nomor" name="plat-nomor" placeholder="Plat Nomor" required>
+    
+                        <label for="jenis-kendaraan">Jenis Kendaraan:</label>
+                        <input type="text" id="jenis-kendaraan" name="jenis-kendaraan" placeholder="Jenis Kendaraan" required>
+    
+                        <label for="tanggal">Tanggal Transaksi:</label>
+                        <input type="date" id="tanggal" name="tanggal" required>
+    
+                        <label for="merek">Merek:</label>
+                        <input type="text" id="merek" name="merek" placeholder="Merek" required>
+    
+                        <label for="kendaraan">Jumlah Kendaraan:</label>
+                        <input type="number" id="kendaraan" name="kendaraan" placeholder="Jumlah Kendaraan" required>
+    
+                        <button type="submit">Tambah Kendaraan</button>
+                    </form>
+                </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Foto</th>
+                        <th>Plat Nomor</th>
+                        <th>Jenis Kendaraan</th>
+                        <th>Merek</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="https://via.placeholder.com/100" width="100"></td>
+                        <td>B 1234 ABC</td>
+                        <td>Mobil</td>
+                        <td>Toyota Avanza</td>
+                        <td>Tersedia</td>
+                        <td>
+                            <a href="#" class="tombol edit">Edit</a><br><br>
+                            <a href="#" class="tombol hapus">Hapus</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><img src="https://via.placeholder.com/100" width="100"></td>
+                        <td>D 5678 XYZ</td>
+                        <td>Motor</td>
+                        <td>Honda Beat</td>
+                        <td>Disewa</td>
+                        <td>
+                            <a href="#" class="tombol edit">Edit</a><br><br>
+                            <a href="#" class="tombol hapus">Hapus</a>
+                        </td>
+   
