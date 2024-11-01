@@ -41,8 +41,7 @@
             width: 80%;
         }
         .form-container input[type="text"],
-        .form-container input[type="email"],
-        .form-container input[type="tel"] {
+        .form-container input[type="number"] {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
@@ -105,62 +104,69 @@
         </div>
         <div class="main">
             <h2>Data Kendaraan</h2>
-            <div class="main">
-                <div class="form-container">
-                    <h2>Form Transaksi Baru</h2>
-                    <form action="proses-transaksi.html" method="post">
-                        <label for="plat-nomor">Plat Nomor:</label>
-                        <input type="text" id="plat-nomor" name="plat-nomor" placeholder="Plat Nomor" required>
+            
+            <div class="form-container">
+                <h2>Form Kendaraan</h2>
+                <form>
+                    <label for="plat-nomor">Plat Nomor:</label>
+                    <input type="text" id="plat-nomor" name="plat-nomor" placeholder="Plat Nomor" required>
     
-                        <label for="jenis-kendaraan">Jenis Kendaraan:</label>
-                        <input type="text" id="jenis-kendaraan" name="jenis-kendaraan" placeholder="Jenis Kendaraan" required>
+                    <label for="jenis-kendaraan">Jenis Kendaraan:</label>
+                    <input type="text" id="jenis-kendaraan" name="jenis-kendaraan" placeholder="Jenis Kendaraan" required>
     
-                        <label for="tanggal">Tanggal Transaksi:</label>
-                        <input type="date" id="tanggal" name="tanggal" required>
+                    <label for="merek">Merek:</label>
+                    <input type="text" id="merek" name="merek" placeholder="Merek" required>
     
-                        <label for="merek">Merek:</label>
-                        <input type="text" id="merek" name="merek" placeholder="Merek" required>
+                    <label for="kendaraan">Jumlah Kendaraan:</label>
+                    <input type="number" id="kendaraan" name="kendaraan" placeholder="Jumlah Kendaraan" required>
     
-                        <label for="kendaraan">Jumlah Kendaraan:</label>
-                        <input type="number" id="kendaraan" name="kendaraan" placeholder="Jumlah Kendaraan" required>
-    
-                        <button type="submit">Tambah Kendaraan</button>
-                    </form>
-                </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Foto</th>
-                        <th>Plat Nomor</th>
-                        <th>Jenis Kendaraan</th>
-                        <th>Merek</th>
-                        <th>Status</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td><img src="https://via.placeholder.com/100" width="100"></td>
-                        <td>B 1234 ABC</td>
-                        <td>Mobil</td>
-                        <td>Toyota Avanza</td>
-                        <td>Tersedia</td>
-                        <td>
-                            <a href="#" class="tombol edit">Edit</a><br><br>
-                            <a href="#" class="tombol hapus">Hapus</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td><img src="https://via.placeholder.com/100" width="100"></td>
-                        <td>D 5678 XYZ</td>
-                        <td>Motor</td>
-                        <td>Honda Beat</td>
-                        <td>Disewa</td>
-                        <td>
-                            <a href="#" class="tombol edit">Edit</a><br><br>
-                            <a href="#" class="tombol hapus">Hapus</a>
-                        </td>
-   
+                    <button type="submit">Tambah Kendaraan</button>
+                </form>
+            </div>
+
+            <div class="table-container">
+                <h2>Data Kendaraan</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Foto</th>
+                            <th>Plat Nomor</th>
+                            <th>Jenis Kendaraan</th>
+                            <th>Merek</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="https://via.placeholder.com/100" width="100"></td>
+                            <td>B 1234 ABC</td>
+                            <td>Mobil</td>
+                            <td>Toyota Avanza</td>
+                            <td>Tersedia</td>
+                            <td>
+                                <a href="#" class="tombol edit">Edit</a> 
+                                <a href="#" class="tombol hapus">Hapus</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img src="https://via.placeholder.com/100" width="100"></td>
+                            <td>D 5678 XYZ</td>
+                            <td>Motor</td>
+                            <td>Honda Beat</td>
+                            <td>Disewa</td>
+                            <td>
+                                <a href="#" class="tombol edit">Edit</a> 
+                                <a href="#" class="tombol hapus">Hapus</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
